@@ -1,3 +1,4 @@
+// revisar 17 de agosto
 
 const getState = ({ getActions, getStore, setStore }) => {
     let fetchTimeout;
