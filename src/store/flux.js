@@ -1,4 +1,3 @@
-// revisar 17 de agosto
 
 const getState = ({ getActions, getStore, setStore }) => {
     let fetchTimeout;
@@ -33,8 +32,8 @@ const getState = ({ getActions, getStore, setStore }) => {
                     headers: { "Content-Type": "application/json" },
                 })
                 .then((response) => {
-                    if (response.status === 200) {
-                        return getActions().getContacts(); // Llamada para obtener contactos (que se recargue)
+                    if (response.status >= 200) {
+                      getActions().getContacts(); // Llamada para obtener contactos (que se recargue)
                     } else {
                         throw new Error('Failed to delete contact');
                     }
